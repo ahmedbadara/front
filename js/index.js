@@ -1,3 +1,5 @@
+/// <reference types="../@types/jquery"/>
+
 // Function to adjust elements dynamically based on screen size
 function adjustLayout() {
   const screenWidth = window.innerWidth;
@@ -14,7 +16,11 @@ function adjustLayout() {
       card.style.width = "auto";
       card.style.margin = "0";
     });
-  }
+  } 
+  $(".fa-xmark").on("click",function(){  
+
+    $(".card-1").slideUp(1000)
+  })
 
   // Adjust font sizes
   const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -83,26 +89,25 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => {
     observer.observe(section);
   });
-}); 
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('header, section, footer');
-    const options = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }, index * 500); // delay in milliseconds
-            }
-        });
-    }, options);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("header, section, footer");
+  const options = {
+    threshold: 0.1,
+  };
 
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }, index * 500); // delay in milliseconds
+      }
+    });
+  }, options);
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});

@@ -8,14 +8,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css" />
+    <link rel="stylesheet" href="css/skitter.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>شركة الصرف الصحي للقاهرة الكبرى</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-primary text-white">
+  <body> 
+    <div class="position-fixed  top-0 start-0 d-flex justify-content-center align-items-center z-3 w-100 vh-100  d-flex bg-white"><span class="loader text-primary"></span></div>
+    <nav class="navbar navbar-expand-lg bg-primary  text-white">
       <div class="container-fluid px-5 py-1 d-flex justify-content-between">
         <button
           class="navbar-toggler bg-white"
@@ -65,28 +67,24 @@
             alt="شركة الصرف الصحي للقاهرة الكبرى"
         /></a>
       </div>
-    </nav>
+    </nav> 
+   
     <header
-      class="vh-100 w-100 overflow-hidden position-relative d-flex justify-content-center align-items-center hidden"
+      class="vh-100 hidden w-100 overflow-hidden position-relative d-flex justify-content-center align-items-center hidden"
     >
       <div
         class="content-container d-flex justify-content-around align-items-center w-100"
       >
-        <div class="side-elements d-flex flex-column">
-          <div class="side-element">معلومة 1</div>
-          <div class="side-element">معلومة 2</div>
-          <div class="side-element">معلومة 3</div>
-          <div class="side-element">معلومة 4</div>
-        </div>
         <section class="card py-5 card-1">
           <div class="card-body text-center bg-white">
             <div class="exit-icon position-relative">
               <i
-                class="fa-solid fa-xmark position-absolute bottom-100 curs mb-4 end-0"
+                id="exitPop"
+                class="fa-solid fa-xmark position-absolute bottom-100 curs mb-2 end-0"
               ></i>
             </div>
             <h1
-              class="text-danger border-bottom m-2 fs-4 card-title align-text-top"
+              class="text-danger border-bottom mt-0 fs-4 card-title align-text-top"
             >
               اخبار مهمة
             </h1>
@@ -96,12 +94,6 @@
             </p>
           </div>
         </section>
-        <div class="side-elements d-flex flex-column">
-          <div class="side-element">معلومة 5</div>
-          <div class="side-element">معلومة 6</div>
-          <div class="side-element">معلومة 7</div>
-          <div class="side-element">معلومة 8</div>
-        </div>
       </div>
     </header>
     <div class="slideUp mt-0 mx-auto" id="news-bar">
@@ -119,7 +111,7 @@
         <a href="#" class="hvr-pop">الخبر الخامس</a><a> -*- </a>
       </marquee>
     </div>
-
+    <div class="about my-3 hidden mx-3"></div>
     <section class="my-5 py-5 container hidden">
       <h3 class="fs-2 text-capitalize text-end textH">معلومات اكثر</h3>
       <div class="row gy-3 my-5">
@@ -271,6 +263,7 @@
         شركة الصرف الصحي للقاهرة الكبرى@
       </div>
     </footer>
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>

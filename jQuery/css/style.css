@@ -1,0 +1,19 @@
+
+
+section{
+    background-color: #ccc;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    overflow: auto;
+}
+
+h2{
+    display: none;
+}
+.desc{
+    display: none;
+}
+.item{
+    display: none;
+}
